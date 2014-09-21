@@ -10,3 +10,11 @@ a{
   width: 100%;
   background-color: #e74c3c;
 }
+
+.logo-text{
+  font-size: 2em;
+}
+
+.recent{
+  margin-top: 3em;
+}
