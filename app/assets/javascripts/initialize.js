@@ -1,8 +1,7 @@
-Shortie = {}
-
 $(document).ready(function(){
   console.log('Welcome to Short.ie')
-  views = new Shortie.Views()
-  controller = new Shortie.Controller(views)
+
+  view = new Shortie.Url.View()
+  controller = new Shortie.Url.Controller(view)
   controller.initialize()
 })
