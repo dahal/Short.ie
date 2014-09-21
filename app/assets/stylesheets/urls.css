@@ -2,11 +2,11 @@
   font-family: "Lucida Bright", Georgia, serif;
 }
 a{
-  color: #16a085;
+  color: #e74c3c;
 }
 
 .header-top{
-  padding: 10em 0 8em 0;
+  padding: 10em 2em 8em 2em;
   width: 100%;
-  background-color: #1abc9c;
+  background-color: #e74c3c;
 }
