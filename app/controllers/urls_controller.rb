@@ -13,6 +13,11 @@ class UrlsController < ApplicationController
     render json: @url.to_json
   end
 
+  def redirect
+    @url = Url.where(short_url: params[:shortie]).first
+    redirect_to @url.long_url 
+  end
+
   private
   def url_params
     params.require(:url).permit(:long_url, :short_url)
