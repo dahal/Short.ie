@@ -6,6 +6,7 @@ class Url < ActiveRecord::Base
   multiline: true,
   on: :create
   validates :short_url, uniqueness: true
+  before_create :shortify
 
   def shortify
     self.short_url ||= SecureRandom.base64(3)
