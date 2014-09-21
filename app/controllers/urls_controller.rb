@@ -8,4 +8,14 @@ class UrlsController < ApplicationController
     render json: @urls.to_json
   end
 
+  def create
+    @url = Url.create(url_params)
+    render json: @url.to_json
+  end
+
+  private
+  def url_params
+    params.require(:url).permit(:long_url, :short_url)
+  end
+
 end
