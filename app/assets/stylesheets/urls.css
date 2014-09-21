@@ -4,3 +4,9 @@
 a{
   color: #16a085;
 }
+
+.header-top{
+  padding: 10em 0 8em 0;
+  width: 100%;
+  background-color: #1abc9c;
+}
