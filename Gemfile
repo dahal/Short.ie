@@ -11,3 +11,12 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'spring',        group: :development
+
+group :development, :test do 
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'pry'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers', require: false
+end
