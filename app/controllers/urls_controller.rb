@@ -1,5 +1,11 @@
 class UrlsController < ApplicationController
   def index
-    @urls = Url.all
+    render layout: true
   end
+
+  def recent
+    @urls = Url.all.first(20)
+    render json: @urls.to_json
+  end
+
 end
