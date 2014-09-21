@@ -15,6 +15,9 @@ describe Url do
       expect(invalid_url.valid?).to be(false)
     end
     it "Validates the uniqueness of short url"
-    it "Validates that it shortens the url before save"
+    it "Validates that it shortens the url before save" do
+      expect(valid_url).to receive(:shortify)
+      valid_url.shortify
+    end
   end
 end
