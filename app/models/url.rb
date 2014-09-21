@@ -5,6 +5,7 @@ class Url < ActiveRecord::Base
   with: /^((ftp|http|https):\/\/)?([a-zA-Z0-9]+(\.[a-zA-Z0-9]+)+.*)$/,
   multiline: true,
   on: :create
+  validates :short_url, uniqueness: true
 
   def shortify
     self.short_url ||= SecureRandom.base64(3)
