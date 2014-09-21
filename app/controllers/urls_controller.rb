@@ -1,5 +1,6 @@
 class UrlsController < ApplicationController
   def index
+    @urls = Url.all.first(15)
     render layout: true
   end
 
