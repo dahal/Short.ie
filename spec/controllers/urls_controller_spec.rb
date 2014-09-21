@@ -1,12 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe UrlsController, :type => :controller do
-
-  describe "GET index" do
-    it "returns http success" do
-      get :index
-      expect(response).to be_success
+describe UrlsController do
+  context "#index" do
+    it "renders the application.html.erb layout"
     end
+    it "return all domains as an json object"
   end
-
 end
