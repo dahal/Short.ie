@@ -15,6 +15,10 @@ a{
   font-size: 2em;
 }
 
+.center{
+  text-align: center;
+}
+
 .recent{
   margin-top: 3em;
 }
