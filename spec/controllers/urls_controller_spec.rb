@@ -17,4 +17,12 @@ describe UrlsController do
     end
   end
 
+  context "#create" do
+    it "creates new url" do
+      expect{
+        post :create, new_url: Url.create(long_url: Faker::Internet.url)
+      }.to change(Url, :count).by(1)
+    end
+  end
+
 end
