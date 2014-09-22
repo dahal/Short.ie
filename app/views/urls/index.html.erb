@@ -1,12 +1,15 @@
 <div class="header-top">
+  <h1 class='intro'>Shorten your URL</h1>
   <%= render 'partials/form' %>
 </div>
 
 <div class="container">
   <div class="col-md-8 col-sm-offset-2 recent">
-    <div class="row">
-      <h2 class='center'>Recent Urls</h2><hr>
+    <h2 class='center'>Recent Urls</h2><hr>
+    <div class="row list-row">
       <%= render 'partials/list' %>
     </div>
   </div>
 </div>
+<%= render 'partials/url_template' %>
+

@@ -13,8 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require namespace.js
 //= require_tree .
-
-$(document).ready(function(){
-  $('#popover').popover();
-})

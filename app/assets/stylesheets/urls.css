@@ -22,3 +22,10 @@ a{
 .recent{
   margin-top: 3em;
 }
+
+.intro{
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  padding-bottom: 0.3em;
+}
