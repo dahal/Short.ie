@@ -10,8 +10,18 @@ Shortie.Url.Controller = function(view){
     console.log('bind listener')
     $('form').on('submit', function(e){
       e.preventDefault()
-      this.createNewUrl()
+      this.validateUrl()
     }.bind(this))
+  }
+
+  this.validateUrl = function(){
+    var urlRegex = /^(ftp|ftps|http|https):\/\/([a-zA-Z0-9]+(\.[a-zA-Z0-9]+)+.*)$/
+    if (urlRegex.test(this.view.formLongUrl())) {
+      console.log('matched')
+      this.createNewUrl()
+    } else {
+      this.view.throwUrlError()
+    }
   }
 
   this.createNewUrl = function(){

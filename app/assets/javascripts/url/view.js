@@ -24,6 +24,35 @@ Shortie.Url.View = function(){
 
   this.updateDOM = function(url) {
     $('.list-row').append(url)
+    $('#long_url').removeClass('error')
+    this.throwUrlSuccess()
+    this.popOver()
   }
 
+  this.formLongUrl = function(){
+    return $('#long_url').val()
+  }
+
+  this.throwUrlError = function(){
+    var source   = $("#url-error-template").html();
+    var template = Handlebars.compile(source);
+    this.renderError(template);
+  }
+
+  this.throwUrlSuccess = function(){
+    var source   = $("#url-success-template").html();
+    var template = Handlebars.compile(source);
+    this.renderSuccess(template);
+  }
+
+  this.renderError = function(template){
+    $('.alert').hide()
+    $('#long_url').addClass('error')
+    $('.navbar').append(template)
+  }
+
+  this.renderSuccess = function(template) {
+    $('.alert').hide()
+    $('.navbar').append(template)
+  }
 }

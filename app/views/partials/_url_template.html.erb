@@ -3,8 +3,24 @@
   <div class="panel panel-default col-md-4">
     <div class="panel-body ">
       <center>
-        <a class="pop" href="{{shortUrl}}%>" target="_blank" data-content="{{longUrl}}" rel="popover" data-placement="top" data-trigger="hover" data-original-title="" title="">{{shortUrl}}</a>
+        <a class="pop" href="{{shortUrl}}" target="_blank" data-content="{{longUrl}}" rel="popover" data-placement="top" data-trigger="hover">{{shortUrl}}</a>
       </center>
     </div>
+  </div>
+</script>
+
+<!-- URL Error Template -->
+<script id="url-error-template" type="text/x-handlebars-template">
+  <div class="alert alert-dismissable alert-danger">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <center><strong>Oh snap!</strong> did you miss http, https, ftp or ftps ?</center>
+  </div>
+</script>
+
+<!-- URL Success Template -->
+<script id="url-success-template" type="text/x-handlebars-template">
+  <div class="alert alert-dismissable alert-success">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <center><strong>Oh Yeah!</strong> you just shortened a URL</center>
   </div>
 </script>
