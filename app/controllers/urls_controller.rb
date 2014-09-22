@@ -5,15 +5,15 @@ class UrlsController < ApplicationController
   end
   
   def create
-    long = params[:long_url]
+    @url = Url.new
+    @url.long_url = params[:long_url]
     if params.has_key?('short_url')
-      @url = Url.create(long_url: long, short_url: params[:short_url])
-    else
-      @url = Url.create(long_url: long)
+      @url.short_url = params[:short_url]
     end
+    @url.save
     render json: {
       long_url: @url.long_url,
-      short_url: ENV['DOMAIN']+'/'+@url.short_url
+      short_url: @url.shortified
       }.to_json
   end
 

@@ -13,7 +13,7 @@ describe UrlsController do
     it "creates new url" do
       expect{
         post :create, url: FactoryGirl.create(:url)
-      }.to change(Url, :count).by(1) 
+      }.to change(Url, :count).by(1)
     end
   end
   

@@ -11,4 +11,10 @@ class Url < ActiveRecord::Base
   def shortify
     self.short_url ||= SecureRandom.base64(3)
   end
+
+  def shortified
+    if self.short_url != nil
+      ENV['DOMAIN']+'/'+ self.short_url
+    end
+  end
 end
