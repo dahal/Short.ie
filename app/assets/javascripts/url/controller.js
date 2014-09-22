@@ -16,5 +16,12 @@ Shortie.Url.Controller = function(view){
 
   this.createNewUrl = function(){
     console.log('Create new Url')
+    $.ajax({
+      url: '/urls/create',
+      type: 'POST',
+      data: this.view.getUrl()
+    }).done(function(url){
+      this.view.renderUrl(url)
+    }.bind(this))
   }
 }

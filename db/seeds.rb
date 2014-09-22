@@ -1,1 +1,1 @@
-20.times {Url.create(long_url: Faker::Internet.url)}
+5.times {Url.create(long_url: Faker::Internet.url)}

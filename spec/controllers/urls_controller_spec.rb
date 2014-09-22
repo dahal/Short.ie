@@ -20,8 +20,8 @@ describe UrlsController do
   context "#create" do
     it "creates new url" do
       expect{
-        post :create, url: FactoryGirl.attributes_for(:url)
-      }.to change(Url, :count).by(1)
+        post :create, url: FactoryGirl.create(:url)
+      }.to change(Url, :count).by(1) 
     end
   end
   
