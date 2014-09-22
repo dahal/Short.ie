@@ -21,6 +21,7 @@ Shortie.Url.Controller = function(view){
       type: 'POST',
       data: this.view.getUrl()
     }).done(function(url){
+      console.log(url)
       this.view.renderUrl(url)
     }.bind(this))
   }
