@@ -3,12 +3,7 @@ class UrlsController < ApplicationController
     @urls = Url.all.first(15)
     render layout: true
   end
-
-  def recent
-    @urls = Url.all.first(20)
-    render json: @urls.to_json
-  end
-
+  
   def create
     long = params[:long_url]
     if params.has_key?('short_url')

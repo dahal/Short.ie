@@ -9,14 +9,6 @@ describe UrlsController do
     end
   end
 
-  context "#recent" do
-    it "return 20 urls as json object" do
-      get :recent
-      jsonify = JSON.parse(response.body)
-      expect(jsonify.count).to eq(20)
-    end
-  end
-
   context "#create" do
     it "creates new url" do
       expect{
