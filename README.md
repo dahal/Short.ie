@@ -1,6 +1,8 @@
 ### Short.ie
 URL Shortner
 
+[![Build Status](https://drone.io/github.com/dahal/Short.ie/status.png)](https://drone.io/github.com/dahal/Short.ie/latest)
+
 ##### Check it Out
 
 ```
